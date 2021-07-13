@@ -1,10 +1,15 @@
-function Profile() {
-    return (
-      <>
-      
-      </>
+import React, {useContext} from 'react'
+
+import { LoginContext } from "Contexts/LoginContext"
+
+function Profile(){
+    const { username } = useContext(LoginContext);
+    
+    return(
+        <>            
+            {username}
+        </>
     );
-  }
-  
-  export default Profile;
-  
+}
+
+export default Profile;

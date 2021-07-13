@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 
 function Login() {
-    const [username, setUsername] = useState("");
+    const [setUsername, setShowProfile] = useContext(LoginContext);
+    //const [username, setUsername] = useState("");
     const [userPass, setUserPass] = useState("");
 
     return (
@@ -31,7 +32,7 @@ function Login() {
         </div>
         <br />
         <div>
-            <button>Entrar</button>
+            <button onClick={() => {setShowProfile(true)}}>Entrar</button>
         </div>
       
       </>
